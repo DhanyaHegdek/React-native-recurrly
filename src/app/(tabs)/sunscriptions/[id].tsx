@@ -14,7 +14,7 @@ export default function SubscriptionDetail() {
                 Subscription ID: {id}
             </Text>
 
-            <Link href="/subscriptions/subscription" className="mt-4">
+            <Link href="/subscription" className="mt-4">
                 <Text className="text-lg font-bold text-blue-700">
                     Go to Subscription
                 </Text>

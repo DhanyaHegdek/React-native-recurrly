@@ -1,6 +1,6 @@
 
 import { View, Text } from 'react-native';
-import { Link } from 'expo-router';
+import { Link, type Href } from 'expo-router';
 import '../../global.css';
 
 export default function Index() {
@@ -34,7 +34,7 @@ export default function Index() {
         </View>
       </Link>
 
-      <Link href="/subscriptions/subscription" className="mt-4">
+      <Link href={'/subscriptions/subscription' as Href} className="mt-4">
         <Text className="text-blue-700">
           Spotify subscriptions
         </Text>
@@ -42,7 +42,7 @@ export default function Index() {
 
       <Link
         href={{
-          pathname: '/subscriptions/[id]',
+          pathname: '/sunscriptions/[id]',
           params: { id: '123' },
         }}
         className="mt-2"
