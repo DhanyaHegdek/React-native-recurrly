@@ -4,6 +4,12 @@ import { Link, type Href } from 'expo-router';
 import '../../global.css';
 import { SafeAreaView } from "react-native-safe-area-context";
 
+/**
+ * Renders the Home tab with safe-area spacing and links to onboarding,
+ * authentication, and subscription screens.
+ *
+ * @returns The Home screen element.
+ */
 export default function Index() {
   return (
     <SafeAreaView style={{ flex: 1 }}>
