@@ -12,56 +12,36 @@ import { SafeAreaView } from "react-native-safe-area-context";
  */
 export default function Index() {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <View className="flex-1 bg-background p-5">
+    <SafeAreaView className="flex-1 bg-background p-5">
 
-        <Text className="text-xl font-bold text-success-500">
-          Hello! My app is working 🎉
-        </Text>
+      <Text className="text-5xl font-sans-extrabold" >Home</Text>
 
-        <Link href="/onboarding" className="mt-4">
-          <View className="rounded bg-primary px-5 py-3">
-            <Text className="font-bold text-white">
-              Go to Onboarding
-            </Text>
-          </View>
-        </Link>
 
-        <Link href="/(auth)/sign-in" className="mt-2">
-          <View className="rounded bg-primary px-5 py-3">
-            <Text className="font-bold text-white">
-              Go to Sign In
-            </Text>
-          </View>
-        </Link>
-
-        <Link href="/(auth)/sign-up" className="mt-2">
-          <View className="rounded bg-primary px-5 py-3">
-            <Text className="font-bold text-white">
-              Go to Sign Up
-            </Text>
-          </View>
-        </Link>
-
-        <Link href={'/subscriptions/subscription' as Href} className="mt-4">
-          <Text className="text-blue-700">
-            Spotify subscriptions
+      <Link href="/onboarding" className="mt-4" font-sans-bold>
+        <View className="rounded bg-primary px-5 py-3">
+          <Text className="font-bold text-white">
+            Go to Onboarding
           </Text>
-        </Link>
+        </View>
+      </Link>
 
-        <Link
-          href={{
-            pathname: '/sunscriptions/[id]',
-            params: { id: '123' },
-          }}
-          className="mt-2"
-        >
-          <Text className="text-blue-700">
-            Subscription details
+      <Link href="/(auth)/sign-in" className="mt-4" font-sans-bold>
+        <View className="rounded bg-primary px-5 py-3">
+          <Text className="font-bold text-white">
+            Go to Sign In
           </Text>
-        </Link>
+        </View>
+      </Link>
 
-      </View>
-    </SafeAreaView>
+      <Link href="/(auth)/sign-up" className="mt-4" font-sans-bold>
+        <View className="rounded bg-primary px-5 py-3">
+          <Text className="font-bold text-white">
+            Go to Sign Up
+          </Text>
+        </View>
+      </Link>
+
+
+    </SafeAreaView >
   );
 }

@@ -32,6 +32,17 @@
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 76
         }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/plus-jakarta-sans-Regular.ttf",
+            "./assets/fonts/plus-jakarta-sans-Bold.ttf",
+            "./assets/fonts/plus-jakarta-sans-Italic.ttf",
+            "./assets/fonts/plus-jakarta-sans-BoldItalic.ttf"
+          ]
+        }
       ]
     ],
     "experiments": {

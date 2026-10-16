@@ -6,7 +6,6 @@ import {
     ChartNoAxesCombined,
     Settings,
     CreditCard,
-    Component,
 } from "lucide-react-native";
 
 const tabIcons = {
@@ -16,15 +15,13 @@ const tabIcons = {
     subscription: CreditCard,
 };
 
-const tabBar = components.tabBar;
-
 const Layout = () => {
     return (
         <Tabs
             screenOptions={{
                 headerShown: false,
                 tabBarActiveTintColor: "#DB2777",
-                tabBarInactiveTintColor: "#9daac0",
+                tabBarInactiveTintColor: "#9CA3AF",
                 tabBarStyle: {
                     position: "absolute",
                     bottom: 14,

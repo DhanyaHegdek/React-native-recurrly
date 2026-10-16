@@ -1,24 +1,29 @@
 
 import '../global.css';
 import { Stack } from 'expo-router';
-import { useEffect } from 'react';
+import { use, useEffect } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
+import { useFonts } from 'expo-font';
 
-SplashScreen.preventAutoHideAsync();
 
-export default function RootLayout() {
+export default function Layout() {
+  const [fontsLoaded] = useFonts({
+    'sans-regular': require('../../assets/fonts/PlusJakartaSans-Regular.ttf'),
+    'sans-bold': require('../../assets/fonts/PlusJakartaSans-Bold.ttf'),
+    'sans-medium': require('../../assets/fonts/PlusJakartaSans-Medium.ttf'),
+    'sans-semibold': require('../../assets/fonts/PlusJakartaSans-SemiBold.ttf'),
+    'sans-extrabold': require('../../assets/fonts/PlusJakartaSans-ExtraBold.ttf'),
+    'sans-light': require('../../assets/fonts/PlusJakartaSans-Light.ttf'),
+  });
+
   useEffect(() => {
-    SplashScreen.hideAsync();
-  }, []);
+    if (fontsLoaded) {
+      SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded])
 
+  if (!fontsLoaded) return null;
 
-  return (
-    <Stack screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="(tabs)" />
-      <Stack.Screen name="(auth)" />
-      <Stack.Screen name="onboarding" />
-      <Stack.Screen name="explore" />
-    </Stack>
-  );
+  return <Stack screenOptions={{ headerShown: false }} />
 
 }
